@@ -1,0 +1,28 @@
+<%-include("header.ejs") %> 
+
+<div class="content">
+  <div class="login-field">
+    <form action="/login" method="post">
+  
+      <label for="adminType">Choose Admin Type:</label>
+      <select id="adminType" name="adminType">
+        <option value="admin1">Admin 1</option>
+        <option value="admin2">Admin 2</option>
+        <option value="admin3">Admin 3</option>
+        <option value="admin4">Admin 4</option>
+        <option value="admin5">Admin 5</option>
+      </select>
+  
+      <label for="userId">Admin ID:</label>
+      <input type="text" id="userId" name="userId" required>
+  
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+  
+      <button type="submit">Login</button>
+  
+      <div class="error-message" id="error-message"></div>
+    </form>
+  </div>
+</div>
+<%-include("footer.ejs") %> 
