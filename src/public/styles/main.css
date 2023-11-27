@@ -1,17 +1,22 @@
 * {
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;;
+    font-family: 'Montserrat';
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
 body {
-    min-height: 100vh;
-    background-color: #fffbf4;
+    background-color: #e8e8e8;
+    overflow: hidden;
 }
 
 .hotel-header {
-    background-color: #cbe3f7;
+    background-color: #990100;
     width: 100%;
-    height: 150px;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,60 +24,74 @@ body {
 
 .hotel-header-title {
     text-align: center;
-    font-size: 70px;
-    color: #fffbf4;
+    font-size: 2em;
+    color: #f6f6f6;
 }
 
 .hotel-header-title:hover {
-    color: #08a0ff;
+    color: #e8e8e8;
 }
 
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
-    background-color: #cbe3f7;
+    background-color: #990100;
     width: 100%;
     height: 80px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #f6f6f6;
+    text-align: center;
+    font-size: 1em;
 }
 
-footer h1 {
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    font-size: 40px;
-    color: #fffbf4;
-}
 
 footer h1:hover {
     color: #08a0ff;
 }
 
-
-.logo {
-    background-color: #acd7fa;
-    width: 40%;
-    margin:30px;
-    height: 400px;
+.footer-links{
+    color: white;
+    text-decoration: none; 
+    position: relative; 
 }
+
+.footer-links:hover {
+    text-decoration: none; 
+}
+
+.footer-links::before {
+    content: ''; 
+    position: absolute;
+    width: 100%;
+    height: 0.1em; 
+    bottom: 0;
+    left: 0;
+    background-color: white; 
+    transform: scaleX(0); 
+    transition: transform 0.3s ease;
+  }
+  
+
+  .footer-links:hover::before {
+    transform: scaleX(1); 
+    text-decoration: none;
+  }
+  
+  
+  .footer-links:active::before {
+    transform-origin: bottom; 
+    transform: scaleX(1); 
+  }
+
 
 .content {
     display: flex;
     width: 100%;
 }
 
-.login-button {
-    background-color: #acd7fa;
-    height: 100px;
-    width: 300px;
-    margin: auto;
-    border: #08a0ff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
 
 .login-button p {
     font-size: 40px;
@@ -80,7 +99,11 @@ footer h1:hover {
 }
 
 .login-field {
-    background-color: #acd7fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #e8e8e8;
     width: 60%;
     margin: 30px auto;
     height: 400px;
@@ -149,23 +172,48 @@ form {
     flex-direction: column;
 }
 
-label, select {
-    margin: 10px 0px;
-    font-size: 25px;
-    color: #253e53;
+label{
+    margin-left: 0;
+    font-size: 1.5em;
+    color: #000;
 }
 
 input {
-    margin-left: 40px;
-    width: 50%;
-    height: 30px;
+    margin-left: 0;
+    width: 100%;
+    height: 5em;
+    border: 0;
+    outline: none;
+    border-radius: 1em;
 }
 
-form button {
-    margin: 15px auto;
-    color: #08a0ff;
-    font-size: 40px;
+button{
+    border: 0;
+    outline: none;
+    border-radius: 1em;
+    background-color: #333333;
+    color: #e8e8e8;
 }
+
+form button{
+    font-size: 1em;
+    height: 2em;
+    width: 50%;
+    margin-left: 2.7em;
+}
+
+.user-box, .password-box{
+    display:flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    gap: 1em;
+    width:100%;
+    height: 12vh;
+    margin-bottom: 20px;
+
+}
+
 
 .campos-hospedes {
     width: 40%;
