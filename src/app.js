@@ -17,27 +17,35 @@ app.get("/", (req, res) => {
 });
 
 
+//abre a página de login
 app.get("/home", (req, res) => {
     res.render('home.ejs');
 });
 
+
+//abre a página de reservas
 app.get("/reservas", (req, res) => {
     res.render('reservas.ejs');
 });
 
+//abre a página de funcionários
 app.get("/funcionarios", (req, res) => {
     res.render('funcionarios.ejs');
 });
+
 
 app.get("/hospedes", (req, res) => {
     res.render('hospedes.ejs');
 });
 
+
+//abre p fórmulário para adicionar um novo hóspede
 app.get("/adicionar", (req, res) => {
     res.render('adicionar.ejs');
 });
 
 
+//verificação de login
 app.post('/login', (req, res) => {
     const password = req.body.password;
   
@@ -48,3 +56,8 @@ app.post('/login', (req, res) => {
         res.render('login.ejs');
     }
   });
+
+
+app.get('/reservar', (req, res) => {
+    res.render('reservar.ejs')
+})
