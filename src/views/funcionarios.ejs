@@ -1,18 +1,28 @@
 <%-include("header.ejs") %> 
 
+<a class="botao-voltar" href="/home"><img src="styles/seta-esquerda.png"></a>
 <div class="content">
   <div class="choose-field">
-    <div class="barra-pesquisa">
+    <div class="tabelas-hospedes">
       <div class="input-pesquisa">
-        <input type="text" id="txtBusca" placeholder="Buscar funcionário"/>
+        <!-- <form action="/hospedes" method="post" class="form-hospede"> -->
+          <input class="input-hospedes" type="text" id="txtBuscaH" placeholder="Nome"/>
+          <input class="input-hospedes" type="text" id="txtBuscaH" placeholder="Sobrenome"/>
+          <input class="input-hospedes" type="text" id="txtBuscaH" placeholder="CPF"/>
+          <select id="inputSexo" name="sexo" class="input-sexo">
+            <option value="" disabled selected>Sexo</option>
+            <option value="masculino">M</option>
+            <option value="feminino">F</option>
+          </select>
+          <button type="submit" class="button-pesquisa"></button>
+        <!-- </form> -->
       </div>
       <div class="campos-hospedes">
         <a class="botao-adicionar" href="/adicionar">Adicionar</a>
-        <a class="botao-remover" href="/hospedes">Demitir</a>
-        <a class="botao-atualizar" href="/hospedes">Promover</a>
+        <a class="botao-remover" href="/hospedes">Remover</a>
+        <a class="botao-atualizar" href="/hospedes">Atualizar</a>
       </div>
     </div>
 </div>
-<a class="botao-voltar" href="/home">Voltar</a>
 </div>
 <%-include("footer.ejs") %> 
