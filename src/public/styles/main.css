@@ -240,7 +240,7 @@ button{
     border: 0;
     outline: none;
     border-radius: 1em;
-    background-color: #333333;
+    background-color: #161616;
     color: #e8e8e8;
     margin: 0 auto;
 }
@@ -317,13 +317,26 @@ form button{
 }
 
 .form-hospede {
-    margin: 20px 50px;
     display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
     flex-direction: column;
-    max-width: 500px;
-    max-height: 350px;
+    width: 40%;
+    height: 80vh;
+    gap: 0.5em;
+}
+
+.form-hospede select {
+    margin: auto;
+    width: 40%;
+    height: 2.5em;
+    border: 0;
+    outline: none;
+    border-radius: 1em;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-hospede button {
+    margin: 1em auto;
 }
 
 .campos-reserva {
