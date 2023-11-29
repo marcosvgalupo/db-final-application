@@ -44,6 +44,10 @@ app.get("/adicionar", (req, res) => {
     res.render('adicionar.ejs');
 });
 
+app.get("/novo-funcionario", (req, res) => {
+    res.render('novo-funcionario.ejs');
+});
+
 
 //verificação de login
 app.post('/login', (req, res) => {
@@ -53,7 +57,7 @@ app.post('/login', (req, res) => {
     if (password === '123') {
         res.render('home.ejs');
     } else {
-        res.render('login.ejs');
+        res.render('index.ejs');
     }
   });
 

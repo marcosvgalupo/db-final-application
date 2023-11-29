@@ -249,7 +249,7 @@ button:hover{
     cursor: pointer;
 }
 
-form button{
+.form-hospede button, .login-index {
     font-size: 1.2em;
     height: 2.5em;
     min-width: 60%;
@@ -324,7 +324,7 @@ form button{
     gap: 0.5em;
 }
 
-.form-hospede select {
+.form-hospede select, .form-reserva select {
     margin: auto;
     width: 40%;
     height: 2.5em;
@@ -371,4 +371,33 @@ form button{
     width: 5%;
     height: 3vh;
     margin-left: 1em;
+}
+
+.form-reserva {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    gap: 1.5em;
+}
+
+.form-reserva div {
+    height: 60vh;
+    width: 30%;
+}
+
+.nova-reserva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.form-reserva input {
+    margin-bottom: 1em;
+}
+
+.form-reserva button {
+    height: 5vh;
 }
